@@ -46,7 +46,7 @@ In addition to the stock analysis, the code was refactored with the introduction
 
 The original code:
 
-![Original Code](/Resources/Green_Stocks_Code1,png)
+![Original Code](/Resources/Green_Stocks_Code1.png)
 
 The refactored code using a **tickerIndex** integer variable rather than a **ticker** string variable to advance the loop:
 
@@ -59,8 +59,8 @@ The run times for the original code were:
 
 And the run times for the refactored code were:
 
-![Refactored Code 2017](/Resources/VBA-Challenge_2017.png)
-![Refactored Code 2018](/Resources/VBA-Challenge_2018.png)
+![Refactored Code 2017](/Resources/VBA_Challenge_2017.png)
+![Refactored Code 2018](/Resources/VBA_Challenge_2018.png)
 
 As can be seen, the speed of the macro was improved by approximately one-hundreth of a second for both years. While this may not seem like much, this analysis only ran over 12 stocks. This time difference would certainly add up if the analysis were run on hundreds or even thousdands of stocks!
 
