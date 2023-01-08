@@ -18,25 +18,25 @@ The first section of the code declares the variables that will track how long it
 
 The second section of the code declares four arrays that will hold the data. Each array has 12 elements with the ticker array having 12 strings for the stock tickers. The code also creates a variable that counts the number of rows in the data, which will be used to loop the macro over the correct number of rows and maintain the macro's fidelity if any rows are added or removed in future analyses. Also, the tickerIndex variable is declared and set to 0. This tickerIndex will be used in the following loops to track which ticker the macro is gathering data from.
 
-!(Code2)[/Resources/VBA_Challenge_Code2.png]
+![Code2](/Resources/VBA_Challenge_Code2.png)
 
 The third section of code contains the meat of the macro. First, a for loop is run 12 times which will reset the value of each ticker's tickerVolume to 0 preparing for the calculation that will sum up all the volume and store it in accordance with the correct ticker. Next another for loop is created that loops over all the rows (except the header row). This loop first adds the volume of the current row to the tickerVolumes variable, then checks to see if the row above is different from the current ticker. If it is in fact different then the value of the starting price is stored. Then it checks if the row below is different from the current ticker and if it is then the value of the ending price is stored. Also, if this condition is true it advances the tickerindex by 1, which will start storing the volume, starting price, and ending price data the loop is gathering in the next elements of their respective arrays.
 
-!(Code3)[/Resources/VBA_Challenge_Code3.png]
+![Code3](/Resources/VBA_Challenge_Code3.png)
 
 Finally, the  fourth section of code activates the "All Stocks Analysis" sheet and populates the cells of the table with the gathered data.
 
-!(Code4)[/Resources/VBA_Challenge_Code4.png]
+![Code4](/Resources/VBA_Challenge_Code4.png)
 
 Some additional code at the end further formats the table with borders, colors, and some conditional formatting where green returns are positive and red returns are negative allowing the user to quickly see which stocks are providing a net return on the year.
 
-!(Code5)[/Resources/VBA_Challenge_Code5.png]
+![Code5](/Resources/VBA_Challenge_Code5.png)
 
 ### Results
 
-!(2017 Data)[/Resources/VBA_Challenge_2017_Data.png]
+![2017 Data](/Resources/VBA_Challenge_2017_Data.png)
 
-!(2018 Data)[/Resources/VBA)_Challenge_2018_Data.png]
+![2018 Data](/Resources/VBA_Challenge_2018_Data.png)
 
 ### Analysis
 
@@ -46,21 +46,21 @@ In addition to the stock analysis, the code was refactored with the introduction
 
 The original code:
 
-!(Original Code)[/Resources/Green_Stocks_Code1,png]
+![Original Code](/Resources/Green_Stocks_Code1,png)
 
 The refactored code using a **tickerIndex** integer variable rather than a **ticker** string variable to advance the loop:
 
-!(Code3)[/Resources/VBA_Challenge_Code3.png]
+![Code3](/Resources/VBA_Challenge_Code3.png)
 
 The run times for the original code were:
 
-!(Original Code 2017)[/Resources/Green_Stocks_2017.png]
-!(Original Code 2018)[/Resources/Green_Stocks_2018.png]
+![Original Code 2017](/Resources/Green_Stocks_2017.png)
+![Original Code 2018](/Resources/Green_Stocks_2018.png)
 
 And the run times for the refactored code were:
 
-!(Refactored Code 2017)[/Resources/VBA-Challenge_2017.png]
-!(Refactored Code 2018)[/Resources/VBA-Challenge_2018.png]
+![Refactored Code 2017](/Resources/VBA-Challenge_2017.png)
+![Refactored Code 2018](/Resources/VBA-Challenge_2018.png)
 
 As can be seen, the speed of the macro was improved by approximately one-hundreth of a second for both years. While this may not seem like much, this analysis only ran over 12 stocks. This time difference would certainly add up if the analysis were run on hundreds or even thousdands of stocks!
 
