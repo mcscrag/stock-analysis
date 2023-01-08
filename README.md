@@ -14,7 +14,7 @@ A macro was built using VBA to automate the processing of the stock data. The ma
 
 The first section of the code declares the variables that will track how long it takes the code to run. It also creates and fills the header cells, and prompts the user to input what year they would like to analyze.
 
-!(Code1)[[/../main/Resources/VBA_Challenge_Code1.png](https://github.com/mcscrag/stock-analysis/blob/main/Resources/VBA_Challenge_Code1.png)]
+![Code1](/Resources/VBA_Challenge_Code1.png)
 
 The second section of the code declares four arrays that will hold the data. Each array has 12 elements with the ticker array having 12 strings for the stock tickers. The code also creates a variable that counts the number of rows in the data, which will be used to loop the macro over the correct number of rows and maintain the macro's fidelity if any rows are added or removed in future analyses. Also, the tickerIndex variable is declared and set to 0. This tickerIndex will be used in the following loops to track which ticker the macro is gathering data from.
 
